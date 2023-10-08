@@ -1,0 +1,28 @@
+.movies {
+    margin: 0 auto;
+    padding: 82px 0 60px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 360px));
+    justify-content: center;
+    row-gap: 43px;
+    column-gap: 30px;
+  }
+  
+  @media (max-width: 810px) {
+    .movies {
+      padding: 80px 0 47px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 339px));
+      column-gap: 30px;
+      row-gap: 30px;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    .movies {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+      row-gap: 0;
+      padding: 49px 0 79px;
+    }
+  }
+  

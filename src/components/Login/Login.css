@@ -1,0 +1,29 @@
+.login {
+    padding: 70px 0;
+    margin: 0 auto;
+  }
+  
+  .login__logo {
+    max-width: 396px;
+    margin: 0 auto 37px;
+  }
+  
+  @media (max-width: 768px) {
+    .login {
+      padding: 231px 0;
+    }
+  }
+  
+  @media (max-width: 424px) {
+    .login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 56px 0;
+    }
+  
+    .login__logo {
+      margin-bottom: 46px;
+    }
+  }
+  

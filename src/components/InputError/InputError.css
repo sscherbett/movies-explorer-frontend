@@ -1,0 +1,21 @@
+.form__error {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    color: #ee3465;
+    padding-top: 6px;
+    visibility: hidden;
+    min-height: 18px;
+  }
+  
+  .form__error_type_profile {
+    text-align: center;
+    font-size: 11px;
+    line-height: 13.31px;
+    margin-bottom: 20px;
+  }
+  
+  .form__error_visible {
+    visibility: visible;
+  }
+  

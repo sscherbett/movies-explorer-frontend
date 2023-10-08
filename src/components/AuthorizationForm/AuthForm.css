@@ -1,0 +1,60 @@
+.auth__title {
+    margin: 0 auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    text-align: left;
+    max-width: 396px;
+    margin-bottom: 40px;
+  }
+  
+  .form {
+    max-width: 398px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form__link-wrapper {
+    display: flex;
+    column-gap: 6px;
+    justify-content: center;
+  }
+  
+  .form__link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #000;
+  }
+  
+  .form__link:hover {
+    opacity: 0.7;
+  }
+  
+  .form__question {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #A0A0A0;
+  }
+  
+  @media (max-width: 424px) {
+    .auth__title {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  
+    .form__question {
+      font-size: 12px;
+      line-height: 14.52px;
+    }
+  
+    .form__link {
+      font-size: 12px;
+      line-height: 14.52px;
+    }
+  }
+  

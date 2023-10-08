@@ -1,0 +1,142 @@
+.about-project {
+    padding: 110px 70px 91px;
+  }
+  
+  .about-project__content {
+    padding-top: 70px;
+    display: flex;
+    column-gap: 52px;
+    margin-bottom: 110px;
+  }
+  
+  .about-project__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 26px;
+  }
+  
+  .about-project__heading {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+  }
+  
+  .about-project__text {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  
+  .about-project__deadlines {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(2, 36px);
+    row-gap: 14px;
+    align-content: center;
+  }
+  
+  .about-project__weeks {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+  }
+  
+  .about-project__weeks_type_backend {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .about-project__weeks_type_frontend {
+    background-color: #F2F2F2;
+    color: #000;
+  }
+  
+  .about-project__label {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-align: center;
+    color: #A0A0A0;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .about-project {
+      padding: 90px 50px 72px;
+    }
+  
+    .about-project__content {
+      column-gap: 38px;
+      margin-bottom: 93px;
+    }
+  
+    .about-project__deadlines {
+      grid-template-columns: 21% 79%;
+    }
+  
+    .about-project__description {
+      row-gap: 22px;
+    }
+  
+    .about-project__text {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  
+  }
+  
+  @media (max-width: 572px) {
+  
+    .about-project {
+      padding: 70px 18px 70px;
+    }
+  
+    .about-project__content {
+      padding-top: 61px;
+      margin-bottom: 58px;
+      flex-direction: column;
+      row-gap: 57px;
+    }
+  
+    .about-project__description {
+      row-gap: 16px;
+    }
+  
+    .about-project__heading {
+      font-size: 18px;
+      line-height: 21.78px;
+    }
+  
+    .about-project__text {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  
+    .about-project__deadlines {
+      grid-template-columns: 35% 65%;
+      row-gap: 10px;
+    }
+  
+    .about-project__weeks {
+      font-size: 11px;
+      line-height: 13.31px;
+    }
+  
+    .about-project__label {
+      font-size: 11px;
+      line-height: 13.31px;
+    }
+  
+  }
