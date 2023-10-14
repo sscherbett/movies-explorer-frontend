@@ -1,5 +1,5 @@
-const BASE_URL = 'http://localhost:3001';
-// const BASE_URL = 'https://api.scherbett.nomoredomainsicu.ru';
+// const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://api.scherbett.nomoredomainsicu.ru';
 
 export async function register(name, email, password) {
   try {
