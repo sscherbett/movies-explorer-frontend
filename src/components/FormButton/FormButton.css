@@ -17,7 +17,7 @@
   .form__submit-button_disabled {
     background: #f8f8f8;
     color: #c2c2c2;
-    cursor: auto;
+    pointer-events: none;
   }
   
   .form__submit-button:hover {
@@ -30,6 +30,10 @@
   
   .form__submit-button_type_signin {
     margin-top: 157px;
+  }
+
+  .form__submit-button_type_profile {
+    width: 410px;
   }
   
   @media (max-width: 424px) {
