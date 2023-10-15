@@ -40,6 +40,22 @@
     line-height: 17px;
     color: #A0A0A0;
   }
+
+  .form__button-wrapper_type_signin {
+    margin-top: 196px;
+  }
+  
+  .form__button-wrapper_type_signup {
+    margin-top: 127px;
+  }
+
+  .form__server-error {
+    text-align: center;
+    min-height: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FF4062;
+  }
   
   @media (max-width: 424px) {
     .auth__title {
