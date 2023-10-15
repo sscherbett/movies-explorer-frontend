@@ -2,6 +2,7 @@ import React from 'react';
 import './MoviesCard.css';
 import { useLocation } from 'react-router-dom';
 import * as MainApi from '../../utils/MainApi';
+import useWindowWidth from '../../hooks/UseWindowWidth';
 
 function MoviesCard({
   movie,
@@ -15,13 +16,14 @@ function MoviesCard({
   const location = useLocation();
   const isSaved = savedMovies.some((card) => card.movieId === movie.id);
 
-  const [isShownHoverContent, setIsShownHoverContent] = React.useState(false);
+  const [isShownHoverContent, setIsShownHoverContent] = React.useState(null);
 
   const movieSaveButtonClassName = `${
     isSaved ? 'movies__save-button_type_saved' : 'movies__save-button'
   }`;
 
   const movieDeleteButtonClassName = 'movies__save-button_type_delete';
+  const windowWidth = useWindowWidth();
 
   function convertDuration(minutes) {
     const min = minutes % 60;
@@ -93,7 +95,6 @@ function MoviesCard({
         nameRU: movie.nameRU,
         nameEN: movie.nameEN,
       };
-      console.log(newMovie);
       handleSaveMovie(newMovie);
     } else {
       const isSaved = savedMovies.some((card) => card.movieId === movie.id);
@@ -120,7 +121,7 @@ function MoviesCard({
 
   return (
     <li className="movies__item">
-      {isShownHoverContent && (
+      {(isSaved || windowWidth < 768 || isShownHoverContent) && (
         <button
           type="button"
           className={
@@ -133,7 +134,7 @@ function MoviesCard({
               ? () => handleClick(movie)
               : () => handleDeleteSavedMovie(movie)
           }
-          onMouseEnter={() => setIsShownHoverContent(true)}
+          onMouseOver={() => setIsShownHoverContent(true)}
         />
       )}
       <a
@@ -150,13 +151,15 @@ function MoviesCard({
           }
           alt={movie.nameRU}
           className="movies__image"
-          onMouseEnter={() => !isSaved && setIsShownHoverContent(true)}
-          onMouseLeave={() => !isSaved && setIsShownHoverContent(false)}
+          onMouseOver={() => !isSaved && setIsShownHoverContent(true)}
+          onMouseOut={() => !isSaved && setIsShownHoverContent(false)}
         />
       </a>
       <div className="movies__wrapper">
         <h2 className="movies__title">{movie.nameRU}</h2>
-        <span className="movies__duration">{convertDuration(movie.duration)}</span>
+        <span className="movies__duration">
+          {convertDuration(movie.duration)}
+        </span>
       </div>
     </li>
   );
