@@ -134,7 +134,7 @@ function MoviesCard({
               ? () => handleClick(movie)
               : () => handleDeleteSavedMovie(movie)
           }
-          onMouseOver={() => setIsShownHoverContent(true)}
+          onMouseEnter={() => setIsShownHoverContent(true)}
         />
       )}
       <a
@@ -151,8 +151,8 @@ function MoviesCard({
           }
           alt={movie.nameRU}
           className="movies__image"
-          onMouseOver={() => !isSaved && setIsShownHoverContent(true)}
-          onMouseOut={() => !isSaved && setIsShownHoverContent(false)}
+          onMouseEnter={() => !isSaved && setIsShownHoverContent(true)}
+          onMouseLeave={() => !isSaved && setIsShownHoverContent(false)}
         />
       </a>
       <div className="movies__wrapper">
