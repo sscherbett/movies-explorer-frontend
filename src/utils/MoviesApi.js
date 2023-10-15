@@ -6,7 +6,6 @@ export async function getMovies() {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${localStorage.getItem('jwt')}`
       },
     });
     if (res.ok) {
